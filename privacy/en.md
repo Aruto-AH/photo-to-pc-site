@@ -32,13 +32,15 @@ App updates are delivered by the Microsoft Store. Information handled by the Sto
 - Files go directly from a phone on the same Wi-Fi to the save folder on the PC. They do not pass through any server on the internet.
 - The default save folder is "Pictures\Photo to PC". You can change it in Settings.
 - No app is needed on the phone. Scan the QR code shown on the PC with the phone's camera, and send from the phone's web browser.
+- Files other than photos and videos are saved with the same mark that Windows puts on files from the internet (Mark of the Web), so that Windows can warn you when you open them. Shortcuts and similar files are saved with ".txt" added to the end of the name, so that they do nothing when opened.
 
 ## 3. The connection is not encrypted
 
 - To receive files from your phone, the app runs a small web server on the PC (HTTP, port 8765).
 - The connection is **not encrypted** (it is not HTTPS). Other people on the same Wi-Fi may be able to see what you send. Use the app only on a Wi-Fi network you trust, such as at home.
 - To keep other people from sending files, the QR code contains an "access key". The key is shown only on the app's screen and is never written to files or logs.
-- The key in the QR code can be used only once. The phone's browser that reads it receives a separate key for that phone in a cookie, and the QR code changes. When you choose "Resume receiving" or "Refresh QR code" on the PC, both keys are renewed and the old ones stop working.
+- The key in the QR code can be used only once (the old key still works for 60 seconds after it is used, in case a QR reader and the browser open it one after the other). The phone's browser that reads it receives a separate key for that phone in a cookie, and the QR code changes. When you choose "Resume receiving" or "Refresh QR code" on the PC, both keys are renewed and the old ones stop working.
+- This cookie is stored only in the phone's browser and is used only for the connection to this PC. It is deleted when the browser is closed. It is not used for tracking or ads.
 - The app does not accept connections from outside the same Wi-Fi (the same network). It stops receiving automatically when nothing is sent for a while (30 minutes by default; you can change this in Settings).
 
 ## 4. Location and date taken in photos
