@@ -38,7 +38,7 @@ App updates are delivered by the Microsoft Store. Information handled by the Sto
 - To receive files from your phone, the app runs a small web server on the PC (HTTP, port 8765).
 - The connection is **not encrypted** (it is not HTTPS). Other people on the same Wi-Fi may be able to see what you send. Use the app only on a Wi-Fi network you trust, such as at home.
 - To keep other people from sending files, the QR code contains an "access key". The key is shown only on the app's screen and is never written to files or logs.
-- The phone's browser remembers the key in a cookie. When you choose "Resume receiving" or "Refresh QR code" on the PC, a new key is made and the old one stops working.
+- The key in the QR code can be used only once. The phone's browser that reads it receives a separate key for that phone in a cookie, and the QR code changes. When you choose "Resume receiving" or "Refresh QR code" on the PC, both keys are renewed and the old ones stop working.
 - The app does not accept connections from outside the same Wi-Fi (the same network). It stops receiving automatically when nothing is sent for a while (30 minutes by default; you can change this in Settings).
 
 ## 4. Location and date taken in photos
