@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1f2328; --bg: #ffffff; --muted: #59636e; --accent: #264d8c; --rule: #d1d9e0; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e6e8eb; --bg: #15171a; --muted: #9aa3ad; --accent: #8fb0e8; --rule: #33383e; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Sans", system-ui, sans-serif; line-height: 1.75; }
+  main { max-width: 44rem; margin: 0 auto; padding: 2rem 16px 4rem; }
+  :lang(ja) { line-break: strict; }
+  h1 { font-size: 1.6rem; line-height: 1.4; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  a { color: var(--accent); }
+  li { margin: .3rem 0; }
+</style>
+</head>
+<body>
+<main>
+{{ content }}
+</main>
+</body>
+</html>

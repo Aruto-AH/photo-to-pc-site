@@ -1,0 +1,5 @@
+title: Photo to PC
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
